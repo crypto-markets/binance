@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 03 Feb 2018 16:33:08 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 290
+Connection: keep-alive
+Access-Control-Max-Age: 300
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache, no-store
+
+{
+  "symbol": "BTCUSDT",
+  "orderId": 28,
+  "clientOrderId": "6gCrw2kRUAF9CvJDGP16IP",
+  "transactTime": 1507725176595,
+  "price": "0.00000000",
+  "origQty": "10.00000000",
+  "executedQty": "10.00000000",
+  "status": "FILLED",
+  "timeInForce": "GTC",
+  "type": "LIMIT",
+  "side": "SELL"
+}

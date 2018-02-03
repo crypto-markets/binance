@@ -1,0 +1,32 @@
+{
+    "name": "crypto-markets/binance",
+    "description": "Binance gateway for the cryptocurrency processing library.",
+    "keywords": ["cryptocurrency", "exchange", "binance"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sercan Cakir",
+            "email": "srcnckr@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CryptoMarkets\\Binance\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "crypto-markets/common": "~1.0"
+    },
+    "require-dev": {
+        "crypto-markets/tests": "~1.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

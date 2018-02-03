@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 03 Feb 2018 16:33:08 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 189
+Connection: keep-alive
+Access-Control-Max-Age: 300
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache, no-store
+
+{
+  "lastUpdateId": 1027024,
+  "bids": [
+    [
+      "4.00000000",
+      "431.00000000",
+      []
+    ]
+  ],
+  "asks": [
+    [
+      "4.00000200",
+      "12.00000000",
+      []
+    ]
+  ]
+}

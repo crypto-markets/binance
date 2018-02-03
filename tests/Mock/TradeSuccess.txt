@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 03 Feb 2018 16:33:08 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 159
+Connection: keep-alive
+Access-Control-Max-Age: 300
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache, no-store
+
+[
+  {
+    "id": 28457,
+    "price": "4.00000100",
+    "qty": "12.00000000",
+    "time": 1499865549590,
+    "isBuyerMaker": true,
+    "isBestMatch": true
+  }
+]
