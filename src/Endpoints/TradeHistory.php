@@ -18,7 +18,7 @@ class TradeHistory extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v3/allOrders';
+        return parent::getUrl().'v3/allOrders';
     }
 
     /**

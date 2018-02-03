@@ -11,7 +11,7 @@ class OrderBook extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v1/depth';
+        return parent::getUrl().'v1/depth';
     }
 
     /**

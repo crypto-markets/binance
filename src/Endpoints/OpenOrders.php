@@ -18,7 +18,7 @@ class OpenOrders extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v3/openOrders';
+        return parent::getUrl().'v3/openOrders';
     }
 
     /**

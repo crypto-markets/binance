@@ -18,7 +18,7 @@ class Cancel extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v3/order';
+        return parent::getUrl().'v3/order';
     }
 
     /**

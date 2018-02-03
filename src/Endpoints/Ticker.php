@@ -11,7 +11,7 @@ class Ticker extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v1/ticker/24hr';
+        return parent::getUrl().'v1/ticker/24hr';
     }
 
     /**

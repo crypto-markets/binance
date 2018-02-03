@@ -11,7 +11,7 @@ class Symbol extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v1/exchangeInfo';
+        return parent::getUrl().'v1/exchangeInfo';
     }
 
     /**
@@ -43,7 +43,6 @@ class Symbol extends Endpoint
                 ];
             }
         }
-
 
         return $output;
     }

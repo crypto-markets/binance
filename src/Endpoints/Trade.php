@@ -11,7 +11,7 @@ class Trade extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v1/trades';
+        return parent::getUrl().'v1/trades';
     }
 
     /**

@@ -18,7 +18,7 @@ class Balance extends Endpoint
      */
     public function getUrl()
     {
-        return parent::getUrl() .'v3/account';
+        return parent::getUrl().'v3/account';
     }
 
     /**
