@@ -16,28 +16,28 @@ class GatewayTest extends GatewayTestCase
 
     public function testSymbols()
     {
-        $request = $this->gateway->symbols([]);
+        $request = $this->gateway->symbols();
 
         $this->assertInstanceOf(Endpoints\Symbol::class, $request);
     }
 
     public function testTicker()
     {
-        $request = $this->gateway->ticker([]);
+        $request = $this->gateway->ticker('BTCUSDT');
 
         $this->assertInstanceOf(Endpoints\Ticker::class, $request);
     }
 
     public function testOrderBook()
     {
-        $request = $this->gateway->orderBook([]);
+        $request = $this->gateway->orderBook('BTCUSDT');
 
         $this->assertInstanceOf(Endpoints\OrderBook::class, $request);
     }
 
     public function testTrades()
     {
-        $request = $this->gateway->trades([]);
+        $request = $this->gateway->trades('BTCUSDT');
 
         $this->assertInstanceOf(Endpoints\Trade::class, $request);
     }
@@ -51,42 +51,42 @@ class GatewayTest extends GatewayTestCase
 
     public function testBuy()
     {
-        $request = $this->gateway->buy([]);
+        $request = $this->gateway->buy('BTCUSDT', '0.10', '1.0');
 
         $this->assertInstanceOf(Endpoints\Buy::class, $request);
     }
 
     public function testSell()
     {
-        $request = $this->gateway->sell([]);
+        $request = $this->gateway->sell('BTCUSDT', '0.10', '1.0');
 
         $this->assertInstanceOf(Endpoints\Sell::class, $request);
     }
 
     public function testStatus()
     {
-        $request = $this->gateway->status([]);
+        $request = $this->gateway->status('BTCUSDT', 1);
 
         $this->assertInstanceOf(Endpoints\Status::class, $request);
     }
 
     public function testCancel()
     {
-        $request = $this->gateway->cancel([]);
+        $request = $this->gateway->cancel('BTCUSDT', 1);
 
         $this->assertInstanceOf(Endpoints\Cancel::class, $request);
     }
 
     public function testOpenOrders()
     {
-        $request = $this->gateway->openOrders([]);
+        $request = $this->gateway->openOrders('BTCUSDT');
 
         $this->assertInstanceOf(Endpoints\OpenOrders::class, $request);
     }
 
     public function testTradeHistory()
     {
-        $request = $this->gateway->tradeHistory([]);
+        $request = $this->gateway->tradeHistory('BTCUSDT');
 
         $this->assertInstanceOf(Endpoints\TradeHistory::class, $request);
     }

@@ -32,88 +32,106 @@ class Gateway extends BaseGateway
     /**
      * {@inheritdoc}
      */
-    public function symbols(array $params = [])
+    public function symbols()
     {
-        return $this->createRequest(Endpoints\Symbol::class, $params);
+        return $this->createRequest(Endpoints\Symbol::class);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function ticker(array $params = [])
+    public function ticker($symbol)
     {
-        return $this->createRequest(Endpoints\Ticker::class, $params);
+        return $this->createRequest(Endpoints\Ticker::class, compact(
+            'symbol'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function orderBook(array $params = [])
+    public function orderBook($symbol, $limit = 50)
     {
-        return $this->createRequest(Endpoints\OrderBook::class, $params);
+        return $this->createRequest(Endpoints\OrderBook::class, compact(
+            'symbol', 'limit'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function trades(array $params = [])
+    public function trades($symbol, $limit = 50)
     {
-        return $this->createRequest(Endpoints\Trade::class, $params);
+        return $this->createRequest(Endpoints\Trade::class, compact(
+            'symbol', 'limit'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function balances(array $params = [])
+    public function balances()
     {
-        return $this->createRequest(Endpoints\Balance::class, $params);
+        return $this->createRequest(Endpoints\Balance::class);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function buy(array $params = [])
+    public function buy($symbol, $amount, $price)
     {
-        return $this->createRequest(Endpoints\Buy::class, $params);
+        return $this->createRequest(Endpoints\Buy::class, compact(
+            'symbol', 'amount', 'price'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function sell(array $params = [])
+    public function sell($symbol, $amount, $price)
     {
-        return $this->createRequest(Endpoints\Sell::class, $params);
+        return $this->createRequest(Endpoints\Sell::class, compact(
+            'symbol', 'amount', 'price'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function status(array $params = [])
+    public function status($symbol, $id)
     {
-        return $this->createRequest(Endpoints\Status::class, $params);
+        return $this->createRequest(Endpoints\Status::class, compact(
+            'symbol', 'id'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function cancel(array $params = [])
+    public function cancel($symbol, $id)
     {
-        return $this->createRequest(Endpoints\Cancel::class, $params);
+        return $this->createRequest(Endpoints\Cancel::class, compact(
+            'symbol', 'id'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function openOrders(array $params = [])
+    public function openOrders($symbol = null)
     {
-        return $this->createRequest(Endpoints\OpenOrders::class, $params);
+        return $this->createRequest(Endpoints\OpenOrders::class, compact(
+            'symbol'
+        ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function tradeHistory(array $params = [])
+    public function tradeHistory($symbol = null)
     {
-        return $this->createRequest(Endpoints\TradeHistory::class, $params);
+        return $this->createRequest(Endpoints\TradeHistory::class, compact(
+            'symbol'
+        ));
     }
 }
