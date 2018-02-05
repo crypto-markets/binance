@@ -60,6 +60,7 @@ class Status extends Endpoint
             'status' => strtolower($data['status']),
             'price' => $data['price'],
             'amount' => $data['origQty'],
+            'executed' => $data['executedQty'],
             'timestamp' => $data['time'],
         ];
     }

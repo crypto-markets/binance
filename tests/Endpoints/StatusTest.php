@@ -32,6 +32,7 @@ class StatusTest extends TestCase
             'status' => 'new',
             'price' => '0.1',
             'amount' => '1.0',
+            'executed' => '0.0',
             'timestamp' => 1499827319559,
         ], $response);
     }

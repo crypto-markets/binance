@@ -52,10 +52,6 @@ class Cancel extends Endpoint
      */
     public function mapResponse(array $data = [])
     {
-        return $data;
-        // return Status::handle($this->market, [
-        //     'symbol' => $data['symbol'],
-        //     'id' => $data['orderId'],
-        // ]);
+        return Status::make($this->httpClient, $this->params)->send();
     }
 }

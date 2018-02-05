@@ -13,13 +13,29 @@ class CancelTest extends TestCase
 
     public function testSendSuccess()
     {
-        // $this->setMockHttpResponse('CancelSuccess.txt');
+        $this->setMockHttpResponse('CancelSuccess.txt');
+        $this->setMockHttpResponse('StatusSuccess.txt');
 
-        // $response = $this->endpoint->send();
+        $this->endpoint->configure([
+            'api_key' => 'secret',
+            'secret' => 'secret',
+            'symbol' => 'LTCBTC',
+            'id'  => '1',
+        ]);
 
-        // $this->assertSame([], $response);
+        $response = $this->endpoint->send();
 
-        $this->assertTrue(true);
+        $this->assertSame([
+            'id' => 1,
+            'symbol' => 'LTCBTC',
+            'side' => 'buy',
+            'type' => 'limit',
+            'status' => 'new',
+            'price' => '0.1',
+            'amount' => '1.0',
+            'executed' => '0.0',
+            'timestamp' => 1499827319559,
+        ], $response);
     }
 
     public function testSendFailure()
